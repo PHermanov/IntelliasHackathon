@@ -1,0 +1,10 @@
+﻿version: '3.4'
+
+services:
+  todoapi:
+    image: intelliashackathon
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80
