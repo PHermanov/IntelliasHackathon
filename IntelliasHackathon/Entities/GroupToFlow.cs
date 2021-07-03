@@ -2,6 +2,7 @@
 {
     public class GroupToFlow
     {
+        public int Id { get; init; }
         public int GroupId { get; set; }
         public int FlowId { get; set; }
 

@@ -15,5 +15,11 @@ namespace IntelliasHackathon.Persistence
         public DbSet<UserToGroup> UsersToGroups { get; set; }
         public DbSet<UserToVideo> UsersToVideos { get; set; }
         public DbSet<Video> Videos { get; set; }
+
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
+        {
+        }
     }
 }
+

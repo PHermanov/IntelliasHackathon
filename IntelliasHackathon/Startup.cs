@@ -23,7 +23,7 @@ namespace IntelliasHackathon
             services.AddDbContext<AppDbContext>(s => s.UseSqlite("Data Source=database.db"));
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AppDbContext appDbContext)
         {
             if (env.IsDevelopment())
             {
@@ -36,6 +36,8 @@ namespace IntelliasHackathon
             {
                 endpoints.MapControllers();
             });
+
+            Seeder.Seed(appDbContext);
         }
     }
 }
